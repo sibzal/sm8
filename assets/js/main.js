@@ -38,7 +38,11 @@ button4.addEventListener('mouseout', ()=>{
 })
 let button5 = document.querySelector('.button5')
 button5.addEventListener('mousemove', ()=>{
-    button5.style.background = 'green'
+    function generateColor() {
+    return '#' + Math.floor(Math.random()*16777215).toString(16)
+    }
+    $color = generateColor()
+    button5.style.background = $color
     button5.style.border = 'none'
     button5.style.padding = '10px 30px'
     button5.style.color = '#fefefe'
